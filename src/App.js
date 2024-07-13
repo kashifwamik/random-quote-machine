@@ -32,20 +32,17 @@ const getRandomQuote=()=>{
     setAuthor(quotesArray[randomInteger].author);
   }
   return (
-    
-    <div className="App">
-      <header className="App-header"  style={{backgroundColor:randomColor}}>
+    <div className="App-header"  style={{backgroundColor:randomColor}}>
       <div id="quote-box" style={{color:randomColor}} >
-        {/* <h1>Random Number: {randomNumber}</h1>  */}
-       <p id="text"><span id="quote-icon"><FontAwesomeIcon icon={faQuoteLeft} /></span> {quote}</p>
-       <p id="author">--{author}</p>
-       <div class="buttons">
-       <a id="tweet-quote" href={encodeURI(`https://www.twitter.com/intent/tweet?text=${quote}   --${author}`)} style={{backgroundColor:randomColor}}><FontAwesomeIcon icon={faTwitter} /></a>
-       <button id="new-quote"onClick={()=>getRandomQuote()} style={{backgroundColor:randomColor}}> New Quote</button>
-       </div>
-       </div>
-      </header>
-    </div>
+          <p id="text"><span id="quote-icon"><FontAwesomeIcon icon={faQuoteLeft} /></span> {quote}</p>
+          <p id="author">--{author}</p>
+         <div className="buttons">
+            <a id="tweet-quote" href={encodeURI(`https://www.twitter.com/intent/tweet?text=${quote}   --${author}`)} style={{backgroundColor:randomColor}}><FontAwesomeIcon icon={faTwitter} /></a>
+            <button id="new-quote"onClick={()=>getRandomQuote()} style={{backgroundColor:randomColor}}> New Quote</button>
+         </div>
+      </div>
+   </div>
+   
   );
 }
 
